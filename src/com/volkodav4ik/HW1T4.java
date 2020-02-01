@@ -15,7 +15,7 @@ public class HW1T4 {
     private static String createAndInitString(String s) {
         StringBuilder sb = new StringBuilder(s);
         for (int i = 1; i <= MAX_VALUE; i++) {
-            sb.append("(" + i + ")");
+            sb.append("(").append(i).append(")");
         }
         s = sb.toString();
         return s;

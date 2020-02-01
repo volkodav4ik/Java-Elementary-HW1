@@ -37,11 +37,11 @@ public class HW1T6 {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] == firstLetter) {
-                    String rowWord = GetWordFromRow(i, j);
+                    String rowWord = getWordFromRow(i, j);
                     if (rowWord.equals(requiredWord)) {
                         result = true;
                     }
-                    String colWord = GetWordFromCol(i, j);
+                    String colWord = getWordFromCol(i, j);
                     if (colWord.equals(requiredWord)) {
                         result = true;
                     }
@@ -51,7 +51,7 @@ public class HW1T6 {
         return result;
     }
 
-    private static String GetWordFromCol(int i, int j) {
+    private static String getWordFromCol(int i, int j) {
         StringBuilder sb = new StringBuilder("");
         if ((i + requiredWord.length()) > matrix.length) {
             return sb.toString();
@@ -63,7 +63,7 @@ public class HW1T6 {
         return sb.toString();
     }
 
-    private static String GetWordFromRow(int i, int j) {
+    private static String getWordFromRow(int i, int j) {
         StringBuilder sb = new StringBuilder("");
         if ((j + requiredWord.length()) > matrix[i].length) {
             return sb.toString();
